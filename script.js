@@ -140,22 +140,22 @@ function validateNumber() {
     }
 }
 
-function validateAge() {
-    const age = ageInput.value.trim();
-    const ageFeedback = document.getElementById('age-feedback');
-    const ageSuccess = document.getElementById('age-success');
-    const ageFailure = document.getElementById('age-failure');
+// function validateAge() {
+//     const age = ageInput.value.trim();
+//     const ageFeedback = document.getElementById('age-feedback');
+//     const ageSuccess = document.getElementById('age-success');
+//     const ageFailure = document.getElementById('age-failure');
 
-    if (age !== '' && !isNaN(age) && (age >= 0 && age <= 120)) {
-        ageFeedback.innerText = '';
-        ageSuccess.style.display = 'inline-block';
-        ageFailure.style.display = 'none';
-    } else {
-        ageFeedback.innerText = 'Invalid age';
-        ageSuccess.style.display = 'none';
-        ageFailure.style.display = 'inline-block';
-    }
-}
+//     if (age !== '' && !isNaN(age) && (age<0 || age>120)) {
+//         ageFeedback.innerText = 'Invalid age';
+//         ageSuccess.style.display = 'none';
+//         ageFailure.style.display = 'inline-block';
+//     } else {
+//         ageFeedback.innerText = '';
+//         ageSuccess.style.display = 'inline-block';
+//         ageFailure.style.display = 'none';
+//     }
+// }
 
 // Form submission validation
 document.querySelector('form').addEventListener('submit', (e) => {
