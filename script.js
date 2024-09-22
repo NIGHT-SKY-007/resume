@@ -146,14 +146,14 @@ function validateAge() {
     const ageSuccess = document.getElementById('age-success');
     const ageFailure = document.getElementById('age-failure');
 
-    if (age !== '' && !isNaN(age) && (age<0 || age>120)) {
-        ageFeedback.innerText = 'Invalid age';
-        ageSuccess.style.display = 'none';
-        ageFailure.style.display = 'inline-block';
-    } else {
+    if (age !== '' && !isNaN(age) && (age >= 0 && age <= 120)) {
         ageFeedback.innerText = '';
         ageSuccess.style.display = 'inline-block';
         ageFailure.style.display = 'none';
+    } else {
+        ageFeedback.innerText = 'Invalid age';
+        ageSuccess.style.display = 'none';
+        ageFailure.style.display = 'inline-block';
     }
 }
 
