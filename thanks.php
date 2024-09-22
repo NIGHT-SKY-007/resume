@@ -1,11 +1,33 @@
 <?php
-// Check if the form has been submitted
 
-    // Retrieve the user's name from the form
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "pinto281";
+    $port = 4306;
+
+    //create connection
+    $connection = new mysqli($servername, $username, $password, $dbname, $port);
+
+    if ($connection->connect_error) {
+        die("Connection Failed: " . $connection->connect_error);
+    }
+
+
+    //get form data
     $name = $_POST['name'];
-    // Display a welcome message with the user's name
+    $email = $_POST['email'];
+    $contact = $_POST['number'];
+    $age = $_POST['age'];
+    $msg = $_POST['message'];
+
+    //prepare and bind
+    $stmt = $connection->prepare("INSERT INTO `resume-data` (name,email,contact,age,message) VALUES (?,?,?,?,?)");
+    $stmt->bind_param("sssss", $name, $email, $contact, $age, $msg);
+
+    if ($stmt->execute()) {
     ?>
-    <html>
+        <html>
 
     <head>
         <title>Welcome</title>
@@ -35,5 +57,8 @@
 
     </html>
     <?php
+    } else {
+        echo "ERROR: " . $stmt->error;
+    }
 
 ?>
