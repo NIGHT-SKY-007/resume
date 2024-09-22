@@ -1,0 +1,91 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movies</title>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">	
+	</script>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		body{background-color:black;
+			color:red;
+			font-family:"jokerman";
+			text-align:center;
+			font-size: 30px;}
+
+		ul{
+			list-style-type: none;
+		}
+
+		.movie-item img{
+			
+			object-fit: cover;
+			width:100%;
+			border-radius: 20px;
+			overflow: hidden;
+			height: 400px;
+			flex-wrap: wrap;
+			padding:0;
+			transition: 0.3s ease-in;
+		}
+
+		.movie-item img:hover{
+			transform: scale(1.1);
+		}
+
+		.movie-container {
+			display: flex; 
+			flex-wrap: wrap; 
+			justify-content: center; 
+			gap: 10px; 
+		}
+
+		.movie-item{
+			box-sizing: border-box;
+			overflow:hidden;
+			display:flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			max-width:270px;
+			max-height: auto;
+			border-radius: 20px;
+			font-size: 1.2rem;
+			text-align: justify;
+			background-color: rgba(226, 43, 43, 0.26);
+			margin:10px;
+			padding:10px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<form>
+		<div>
+			<h1>Horror Movies</h1>
+		</div>
+		<div>
+			<input type="text" placeholder="Search for a Movie" id="search_bar">
+			<input type="button" value="Sort by Year" id="sort_year">
+			<input type="button" value="Sort by Rating" id="sort_rating">
+
+			
+				<ul class="movie-container" id="movie-list"></ul>
+				<div id="movie-details">
+					
+				</div>
+				
+			</div>
+
+		</div>
+	</form>
+	<script src="script_xml.js"></script>
+</body>
+</html>

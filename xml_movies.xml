@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovieDetails>
+	<movie>
+		
+		<title>IT</title>
+		<year>2017</year>
+		<director>Andy Muschietti</director>
+		<genre>Horror</genre>
+		<rating>7.3</rating>
+		<image>https://i.pinimg.com/originals/ba/9b/25/ba9b254a9a7d4377e370f48f98978b22.jpg</image>
+	</movie>
+	<movie>
+		<title>The Conjuring</title>
+		<year>2013</year>
+		<director>James Wan</director>
+		<genre>Horror</genre>
+		<rating>7.5</rating>
+		<image>https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ@@._V1_.jpg</image>
+	</movie>
+	<movie>
+	    <title>The Exorcist</title>
+	    <year>1973</year>
+	    <director>William Friedkin</director>
+	    <genre>Horror</genre>
+	    <rating>8.0</rating>
+		<image>https://m.media-amazon.com/images/I/712QQt4JtTL._AC_UF894,1000_QL80_.jpg</image>
+	</movie>
+	<movie>
+	    <title>A Nightmare on Elm Street</title>
+	    <year>1984</year>
+	    <director>Wes Craven</director>
+	    <genre>Horror</genre>
+	    <rating>7.5</rating>
+		<image>https://i.pinimg.com/474x/d0/5f/d8/d05fd847d4750efcb144cb66b5be482f.jpg</image>
+	</movie>
+	<movie>
+	    <title>Hereditary</title>
+	    <year>2018</year>
+	    <director>Ari Aster</director>
+	    <genre>Horror</genre>
+	    <rating>7.3</rating>
+		<image>https://m.media-amazon.com/images/I/81iRFJ++hBS._UF894,1000_QL80_.jpg</image>
+	</movie>
+	<movie>
+	    <title>Get Out</title>
+	    <year>2017</year>
+	    <director>Jordan Peele</director>
+	    <genre>Horror</genre>
+	    <rating>7.7</rating>
+		<image>https://upload.wikimedia.org/wikipedia/en/a/a3/Get_Out_poster.png</image>
+	</movie>
+	<movie>
+	    <title>A Quiet Place</title>
+	    <year>2018</year>
+	    <director>John Krasinski</director>
+	    <genre>Horror</genre>
+	    <rating>7.5</rating>
+		<image>https://i.pinimg.com/736x/5a/b5/46/5ab546ebe779804366361c4e971adaed.jpg</image>
+	</movie>
+	<movie>
+	    <title>The Invisible Man</title>
+	    <year>2020</year>
+	    <director>Leigh Whannell</director>
+	    <genre>Horror</genre>
+	    <rating>7.1</rating>
+		<image>https://m.media-amazon.com/images/M/MV5BYzc0OGI3NzctNDljYS00MjFiLWIzNjktNjY5MTYwYWRiYWUwXkEyXkFqcGdeQXVyNTU5Mzk0NjE@._V1_.jpg</image>
+	</movie>
+	<movie>
+	    <title>Smile</title>
+	    <year>2022</year>
+	    <director>Patrick Brice</director>
+	    <genre>Horror</genre>
+	    <rating>6.7</rating>
+		<image>https://m.media-amazon.com/images/I/71mlLibuloL.jpg</image>
+	</movie>
+	<movie>
+	    <title>Insidious: The Last Key</title>
+	    <year>2018</year>
+	    <director>Adam Robitel</director>
+	    <genre>Horror</genre>
+	    <rating>5.9</rating>
+		<image>https://mir-s3-cdn-cf.behance.net/project_modules/hd/a0c93260777239.5a58a635ccb2f.jpg</image>
+	</movie>
+</MovieDetails>

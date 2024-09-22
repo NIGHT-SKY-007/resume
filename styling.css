@@ -1,0 +1,534 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+}
+
+#theme{
+    cursor: pointer;
+}
+
+.block-nav{
+    top: 0;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 999;
+}
+
+/* Nav-bar container */
+.nav-bar {
+    min-height: 30px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 5px;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    cursor: pointer;
+    right: auto;
+    height: 30px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    margin: 0%;
+    padding: 2px 0px;
+    margin-left: auto;
+    z-index: 1001;
+}
+
+.hamburger span {
+    background-color: rgb(243, 243, 243);
+    height: 4px;
+    width: 35px;
+    border-radius: 5px;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px 0px 0px;
+}
+
+.image i {
+    font-size: 25px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+
+.nav-bar .image a {
+    color: inherit;
+    /* inherit the text color from the parent element */
+}
+
+.nav-bar .image a i {
+    color: inherit;
+}
+
+
+.nav-bar .image a.insta i {
+    color: #E1306C;
+}
+
+.nav-bar .image a.lkin i {
+    color: #2867B2;
+}
+
+.nav-bar .image a.fb i {
+    color: #3b5998;
+}
+
+.image a{
+    text-decoration: none;
+}
+
+.image i:last-child {
+    margin-right: 0;
+}
+
+/*navigation menu*/
+nav.menu {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    right: 10%px;
+    height: fit-content;
+    background-color: #333;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+nav.menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    margin: 0px 10px; 
+    position: relative;
+}
+
+nav.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    color: white;
+}
+
+/* Display the menu when active */
+.menu.active {
+    display: flex;
+}
+
+.hide-icons.image {
+    display: none;
+}
+
+.contxt {
+    max-width: 70%;
+    margin:50px auto;
+    background-color: rgb(245, 234, 234);
+    padding: 20px;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    position:relative;
+    transition: opacity 0.5s;
+}
+
+:target {
+    padding-top: 50px;
+    margin-top: 20px;
+}
+
+.container{
+    padding: auto;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+    margin: 20px auto;
+    font-size: 2vw;
+    background-color: rgb(241, 239, 239);
+    border-radius: 10px;
+}
+
+p{
+    font-size: 2vw;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+    padding-top: 10px;
+    margin: 20px 30%;
+    font-size: 2vw;
+    background-color: rgb(241, 239, 239);
+    border-radius: 10px;
+}
+
+.lang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lang h6 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.lang img{
+    margin: 10px;
+    padding: 0px 10px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+.intro-container {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 30%;
+    height: 40%;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+}
+
+.info {
+    margin-bottom: 10px;
+    padding-top: 10%;
+    text-align: center;
+    flex: 1;
+}
+
+.info i {
+    font-size: 24px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.about {
+    margin: 20px;
+    padding-left: 20px;
+}
+
+h1{
+    font-size: 4vw;
+    font-weight: 900;
+}
+
+label{
+    font-size: 3vw;
+}
+
+marquee{
+    font-size: 5vw;
+    color: rgb(188, 122, 67);
+    text-decoration: underline;
+}
+
+.proj-cont{
+    padding: 10%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.proj{
+    min-width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: auto;
+    background-color: #c1baba;
+    max-width: 80%;
+    border-radius: 50px;
+    margin: 10px;
+    margin-bottom: 0%;
+    padding: 0px 0px 0px 4%;
+    overflow: hidden;
+    font-size: 4vw;
+    color:white;
+    transition: 0.2s;
+    p{display:none;
+    padding: 10px;
+    padding-bottom: 10px;
+    }
+}
+
+.proj:hover{
+    padding-top:10px;
+    background-color: rgb(108, 108, 108);
+    color:#000000;
+    
+}
+
+.proj img{
+    margin: auto;
+    display: block;
+    height: 50%;
+    width: 70%;
+}
+
+#education {
+    width: 50%;
+    margin: auto;
+    background-color: #f7f7f7;
+    padding: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#education ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#education li {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 20px;
+    height: auto;
+    padding: 10px 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+#education li:hover{
+    background-color: #bdbcbc;
+    cursor: pointer;
+}
+
+#education li.active {
+    background-color: #bdbcbc;
+}
+
+#education h3 {
+    font-weight: bold;
+    margin-top: 0;
+    display: flex;
+    font-size: 4vw;
+}
+
+#education p {
+    margin-bottom: 10px;
+    display: none;
+}
+
+#education span {
+    font-weight: bold;
+}
+
+.dark {
+    background-color: #000000;
+    font-family: jokerman;
+    color: red;}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: #ff0000;
+}
+
+.dark a {
+    color: #890101;
+}
+
+.dark button,
+.dark input[type="button"] {
+    background-color: #ec0c0c;
+    color: #000000;
+}
+
+.dark .container {
+    background-color: #333 !important;
+    border-radius: 10px;}
+
+.dark .contxt{
+    background-color: #000000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.dark .block-nav{
+    background-color: #000000;
+}
+
+.dark .proj{
+    background-color: red;
+}
+
+.dark #education {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark #education ul {
+    background-color: #565656;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.dark #education li {
+    background-color: #555;  
+}
+
+.dark #education li:hover {
+    background-color: #878787;
+}
+
+.dark .intro-container{
+    background-color: #565656;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.dark .intro-container i{
+    color: red;
+}
+
+.dark .flex-container{
+    background-color: #565656;
+}
+
+/* ... and so on */
+
+
+@media only screen and (max-width: 768px) {
+
+    .nav-bar {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        height: 50px;
+    }
+
+    .hamburger {
+        right: 4%;
+        bottom: 10px;
+        align-self: flex-end;
+        justify-content: space-evenly;
+        position: absolute;
+    }
+
+    .hamburger span {
+        background-color: rgb(243, 243, 243);
+        width: 35px;
+        border-radius: 5px;
+        margin: 3px 0px;
+    }
+
+    .image {
+        justify-content: left;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+    }
+
+    nav.menu {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+
+    }
+
+    nav.menu ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav.menu ul li {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    nav.menu ul li a {
+        color: white;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .block-nav {
+        height: 55px;
+    }
+
+    .proj {
+        width: 1000%;
+    }
+    
+    .intro-container {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        margin: 20px auto;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 530px){
+    .flex-container {
+        padding-top: 10px;
+        margin: 20px 10%;
+    }
+}
+
+
