@@ -146,7 +146,7 @@ function validateAge() {
     const ageSuccess = document.getElementById('age-success');
     const ageFailure = document.getElementById('age-failure');
 
-    if (age !== '' && isNaN(age) && age<0 || age>120) {
+    if (age !== '' && !isNaN(age) && (age<0 || age>120)) {
         ageFeedback.innerText = 'Invalid age';
         ageSuccess.style.display = 'none';
         ageFailure.style.display = 'inline-block';
