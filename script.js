@@ -95,13 +95,14 @@ function validateName() {
     const nameFailure = document.getElementById('name-failure');
 
     if (name.length < 3) {
-        nameFeedback.innerText = 'Name should be at least 3 characters long';
-        nameSuccess.style.display = 'none';
-        nameFailure.style.display = 'inline-block';
+      // alert('Name should not be less than 4 characters');
+      nameSuccess.style.display = 'none';
+      nameFailure.style.display = 'inline-block';
+      return false;
     } else {
-        nameFeedback.innerText = '';
-        nameSuccess.style.display = 'inline-block';
-        nameFailure.style.display = 'none';
+      nameSuccess.style.display = 'inline-block';
+      nameFailure.style.display = 'none';
+      return true;
     }
 }
 
@@ -111,15 +112,16 @@ function validateEmail() {
     const emailSuccess = document.getElementById('email-success');
     const emailFailure = document.getElementById('email-failure');
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z][a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
     if (!emailRegex.test(email)) {
-        emailFeedback.innerText = 'Invalid email format';
+      // alert('Invalid Email');
         emailSuccess.style.display = 'none';
         emailFailure.style.display = 'inline-block';
+        return false;
     } else {
-        emailFeedback.innerText = '';
         emailSuccess.style.display = 'inline-block';
         emailFailure.style.display = 'none';
+        return true;
     }
 }
 
@@ -129,14 +131,15 @@ function validateNumber() {
     const numberSuccess = document.getElementById('number-success');
     const numberFailure = document.getElementById('number-failure');
 
-    if (number.length !== 10 || isNaN(number)) {
-        numberFeedback.innerText = 'Invalid mobile number';
+    if (number.length !== 10 || isNaN(number) || /^(0{10}|1{10}|2{10}|3{10}|4{10}|5{10}|6{10}|7{10}|8{10}|9{10}|)$/.test(number)) {
+      // alert('Invalid Number');
         numberSuccess.style.display = 'none';
         numberFailure.style.display = 'inline-block';
+        return false;
     } else {
-        numberFeedback.innerText = '';
         numberSuccess.style.display = 'inline-block';
         numberFailure.style.display = 'none';
+        return true;
     }
 }
 
@@ -146,24 +149,33 @@ function validateAge() {
     const ageSuccess = document.getElementById('age-success');
     const ageFailure = document.getElementById('age-failure');
 
-    if (age !== '' && !isNaN(age) && (age >= 0 && age <= 120)) {
-        ageFeedback.innerText = '';
+    if (age !== '' && !isNaN(age) && (age >= 15 && age <= 120)) {
         ageSuccess.style.display = 'inline-block';
         ageFailure.style.display = 'none';
-    } else {
-        ageFeedback.innerText = 'Invalid age';
+        return true;
+      } else {
+        // alert('Invalid age');
         ageSuccess.style.display = 'none';
         ageFailure.style.display = 'inline-block';
-    }
+        return false;
+      }
 }
 
-// Form submission validation
 document.querySelector('form').addEventListener('submit', (e) => {
-    if (!nameInput.value.trim() || !emailInput.value.trim() || !numberInput.value.trim() || !confirmInput.checked) {
-        e.preventDefault();
-        alert('Please fill in all required fields and agree to share your information');
-    }
+  const isValid = validateAllFields();
+  if (!isValid) {
+    e.preventDefault();
+    alert('Please fill in all required fields with valid values and agree to share your information');
+  }
 });
+
+function validateAllFields() {
+  const nameValid = validateName();
+  const emailValid = validateEmail();
+  const numberValid = validateNumber();
+  const ageValid = validateAge();
+  return nameValid && emailValid && numberValid && ageValid;
+}
 
 
 $(document).ready(function() {
